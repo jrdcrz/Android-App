@@ -5,29 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkgreen"
-    android:gravity="center_horizontal|center_vertical"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".LoginActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="215dp"
-        android:layout_height="143dp"
-        android:layout_gravity="center_horizontal|top"
-        android:contentDescription="@string/logo"
-        app:srcCompat="@drawable/logo2" />
-
-    <TextView
-        android:id="@+id/appName"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/app_name"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#E7F09B"
-        android:textSize="24sp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -35,84 +15,63 @@
         android:layout_margin="30dp"
         android:background="@drawable/custom_edittext"
         app:cardCornerRadius="30dp"
-        app:cardElevation="20dp">
+        app:cardElavation="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="430dp"
             android:layout_gravity="center_horizontal"
             android:elevation="30dp"
-            android:gravity="bottom|center_horizontal"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="18dp">
+            android:padding="24dp">
 
             <TextView
                 android:id="@+id/txtLogin"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginTop="35dp"
+                android:layout_height="wrap_content"
                 android:text="@string/login"
                 android:textAlignment="center"
-                android:textColor="@color/darkgreen"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                tools:ignore="TextSizeCheck" />
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/username"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:autofillHints=""
+                android:layout_marginTop="50dp"
                 android:background="@drawable/custom_edittext"
                 android:hint="@string/username"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:textColor="@color/darkgreen"
-                android:textColorHighlight="@color/yellow"
-                android:textColorHint="#2E7D32"
-                tools:ignore="TextContrastCheck" />
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/darkgreen"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/password"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:autofillHints=""
                 android:background="@drawable/custom_edittext"
                 android:hint="@string/password"
                 android:inputType="text|textPassword"
                 android:padding="10dp"
                 android:textColor="@color/black"
-                android:textColorHighlight="@color/yellow"
-                android:textColorHint="#2E7D32"
-                tools:ignore="TextContrastCheck">
-
-            </EditText>
-
-            <TextView
-                android:id="@+id/textViewForgotPw"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-
-                android:layout_marginEnd="20dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:text="@string/questionForgotPw"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:textColorHighlight="@color/darkgreen"
+                android:autofillHints="" />
 
             <Button
                 android:id="@+id/btnLogin"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@android:color/holo_green_light"
                 android:text="@string/login"
                 android:textColor="@color/darkgreen"
                 android:textSize="20sp"
-                app:cornerRadius="20dp"
-                tools:ignore="DuplicateSpeakableTextCheck" />
+                app:cornerRadius="20dp" />
 
             <TextView
                 android:id="@+id/textViewNoAccountYet"
@@ -122,8 +81,8 @@
 
             <Button
                 android:id="@+id/btnRegister"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:backgroundTint="@android:color/holo_green_light"
                 android:hapticFeedbackEnabled="true"
@@ -132,9 +91,7 @@
                 android:textSize="20sp"
                 app:cornerRadius="20dp" />
 
-
         </LinearLayout>
-
 
     </androidx.cardview.widget.CardView>
 
