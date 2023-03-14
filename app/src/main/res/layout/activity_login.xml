@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkgreen"
-    android:gravity="center"
+    android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -35,40 +35,42 @@
         android:layout_margin="30dp"
         android:background="@drawable/custom_edittext"
         app:cardCornerRadius="30dp"
-        app:cardElavation="20dp">
+        app:cardElevation="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="430dp"
+            android:layout_height="400dp"
             android:layout_gravity="center_horizontal"
             android:elevation="30dp"
-            android:gravity="center_horizontal"
+            android:gravity="bottom|center_horizontal"
             android:orientation="vertical"
-            android:padding="24dp"
-            tools:ignore="TextSizeCheck">
+            android:padding="18dp">
 
             <TextView
                 android:id="@+id/txtLogin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginTop="35dp"
                 android:text="@string/login"
                 android:textAlignment="center"
                 android:textColor="@color/darkgreen"
-                android:textSize="36sp"
-                android:textStyle="bold" />
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
 
             <EditText
                 android:id="@+id/username"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:autofillHints=""
                 android:background="@drawable/custom_edittext"
                 android:hint="@string/username"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:textColor="@color/black"
-                android:textColorHighlight="@color/darkgreen"
+                android:textColor="@color/darkgreen"
+                android:textColorHighlight="@color/yellow"
+                android:textColorHint="#2E7D32"
                 tools:ignore="TextContrastCheck" />
 
             <EditText
@@ -82,14 +84,18 @@
                 android:inputType="text|textPassword"
                 android:padding="10dp"
                 android:textColor="@color/black"
-                android:textColorHighlight="@color/darkgreen"
-                tools:ignore="TextContrastCheck" />
+                android:textColorHighlight="@color/yellow"
+                android:textColorHint="#2E7D32"
+                tools:ignore="TextContrastCheck">
+
+            </EditText>
 
             <TextView
                 android:id="@+id/textViewForgotPw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+
                 android:layout_marginEnd="20dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -117,7 +123,7 @@
             <Button
                 android:id="@+id/btnRegister"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:backgroundTint="@android:color/holo_green_light"
                 android:hapticFeedbackEnabled="true"
@@ -126,7 +132,9 @@
                 android:textSize="20sp"
                 app:cornerRadius="20dp" />
 
+
         </LinearLayout>
+
 
     </androidx.cardview.widget.CardView>
 
