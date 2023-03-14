@@ -4,7 +4,11 @@
     <string name="logo">logoSplash</string>
     <string name="login">Login</string>
     <string name="questionReg">Don\'t have an account yet?</string>
+    <string name="questionLogin">Already have an account?</string>
+    <string name="questionForgotPw">Forgot Password?</string>
     <string name="register">Register</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="email">Email</string>
+    <drawable name="visiblePassword">visible password</drawable>
 </resources>
