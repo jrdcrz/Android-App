@@ -11,4 +11,10 @@
     <string name="password">Password</string>
     <string name="email">Email</string>
     <drawable name="visiblePassword">visible password</drawable>
+    <string name="menu">Menu</string>
+    <string name="coin">Coin</string>
+    <string-array name="profiles">Profile</string-array>
+    <string name="totalCoins">Total Coins</string>
+    <string name="user">Get Username</string>
+    <string name="welcome">Welcome,</string>
 </resources>
