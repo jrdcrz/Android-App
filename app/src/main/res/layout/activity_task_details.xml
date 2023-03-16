@@ -55,7 +55,7 @@
         android:background="@drawable/submit_button_design"
         android:text="Upload Proof"
         android:textSize="20sp"
-        app:backgroundTint="@color/DarkGreen"
+        app:backgroundTint="@color/darkgreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

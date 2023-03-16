@@ -90,7 +90,7 @@
                     android:textColorHighlight="@color/black"
                     android:textSize="10sp"
                     android:textStyle="normal"
-                    app:backgroundTint="@color/DarkGreen"
+                    app:backgroundTint="@color/darkgreen"
                     tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
         </LinearLayout>

@@ -22,7 +22,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Toast.makeText(LoginActivity.this,"Please input username and password!", Toast.LENGTH_SHORT ).show();
                 } else {
                     Toast.makeText(LoginActivity.this, "Redirecting to Dashboard", Toast.LENGTH_LONG).show();
-
+                    intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    startActivity(intent);
                 }
                 break;
             case R.id.btnRegister:
