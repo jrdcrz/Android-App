@@ -66,7 +66,7 @@
                 android:autofillHints=""
                 android:background="@drawable/custom_edittext"
                 android:hint="@string/username"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:padding="10dp"
                 android:textColor="@color/darkgreen"
                 android:textColorHighlight="@color/yellow"

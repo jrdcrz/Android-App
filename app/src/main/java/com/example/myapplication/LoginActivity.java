@@ -1,17 +1,19 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener  {
 
     private EditText username , password;
     private Button loginBtn, registerBtn;
+    private Intent intent;
 
     public void onClick(View v){
         switch (v.getId()){
@@ -20,10 +22,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Toast.makeText(LoginActivity.this,"Please input username and password!", Toast.LENGTH_SHORT ).show();
                 } else {
                     Toast.makeText(LoginActivity.this, "Redirecting to Dashboard", Toast.LENGTH_LONG).show();
+
                 }
                 break;
             case R.id.btnRegister:
                 Toast.makeText(LoginActivity.this, "Redirecting to Register...", Toast.LENGTH_LONG).show();
+                intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             default:
                 break;
         }
