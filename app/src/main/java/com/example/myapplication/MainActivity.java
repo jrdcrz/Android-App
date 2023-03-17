@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 //        getActionBar().hide();
         setContentView(R.layout.activity_main);
+        Intent taskActivityIntent = new Intent(this, TasksActivity.class);
+        startActivity(taskActivityIntent);
     }
 
     public void btnGetStarted(View view){
