@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_layout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -91,13 +92,15 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="413dp"
         android:layout_height="578dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="1.0">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -129,9 +132,143 @@
                 android:textSize="24sp" />
 
         </RelativeLayout>
-
-
     </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/sidebar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="160dp"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2"
+        >
+
+        <RelativeLayout
+            android:id="@+id/profileLayer"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:background="@color/green"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/exitBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:contentDescription="Exit"
+                android:background="@color/green"
+                android:src="@drawable/exit" />
+
+            <ImageView
+                android:id="@+id/user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/exitBtn"
+                android:src="@drawable/profile1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@+id/user_profile"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/username"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/home_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileLayer"
+            android:text="Home"
+            android:onClick="homeTabClick"
+            android:textAlignment="center"
+            android:padding="40px"
+            android:textSize="15sp"
+            android:background="@drawable/border_bottom"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/task_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_tab"
+            android:background="@drawable/border_bottom"
+            android:clickable="true"
+            android:padding="40px"
+            android:text="Tasks"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/rewards_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/task_tab"
+            android:background="@drawable/border_bottom"
+            android:clickable="true"
+            android:padding="40px"
+            android:text="Rewards"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/leaderboards_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rewards_tab"
+            android:background="@drawable/border_bottom"
+            android:clickable="true"
+            android:padding="40px"
+            android:text="Leaderboards"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/settings_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/leaderboards_tab"
+            android:background="@drawable/border_bottom"
+            android:clickable="true"
+            android:padding="40px"
+            android:text="Settings"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/logout_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/settings_tab"
+            android:background="@drawable/border_bottom"
+            android:clickable="true"
+            android:padding="40px"
+            android:text="Logout"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/home_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/sidebar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/scrollView2"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
